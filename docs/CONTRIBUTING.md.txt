@@ -1,0 +1,230 @@
+Contributing to Smart Contract Security Scanner
+Thank you for your interest in contributing! This document provides guidelines for contributing to the project.
+🚀 Getting Started
+
+Fork the repository
+Clone your fork locally
+Create a new branch for your feature
+Make your changes
+Test thoroughly
+Submit a pull request
+
+📝 Types of Contributions
+🐛 Bug Reports
+
+Use GitHub issues to report bugs
+Include detailed reproduction steps
+Provide sample contracts that demonstrate the issue
+Include browser and environment information
+
+✨ Feature Requests
+
+Suggest new vulnerability patterns
+Propose UI/UX improvements
+Request additional export formats
+Suggest performance optimizations
+
+🔧 Code Contributions
+
+Add new vulnerability detection patterns
+Improve existing detection logic
+Enhance UI components
+Add test cases
+Improve documentation
+Optimize performance
+
+🛡️ Vulnerability Pattern Guidelines
+When adding new vulnerability patterns:
+
+Accuracy: Ensure minimal false positives
+Coverage: Test against various contract structures
+Documentation: Include clear description and solution
+Categorization: Assign appropriate category and severity
+
+Example Pattern Structure
+javascript{
+  name: "Descriptive Vulnerability Name",
+  pattern: /well-tested-regex-pattern/g,
+  severity: "critical", // critical, high, medium, low
+  description: "Clear explanation of the vulnerability",
+  solution: "Actionable remediation steps", 
+  gasImpact: "High", // High, Medium, Low, None
+  category: "Access Control" // Appropriate category
+}
+Severity Guidelines
+
+Critical: Immediate financial loss possible
+High: Significant security risk
+Medium: Potential security concern
+Low: Best practice violation
+
+Categories
+
+Access Control
+MEV Protection
+Oracle Manipulation
+Cryptography
+Gas Optimization
+Error Handling
+Input Validation
+Randomness
+Transparency
+Decentralization
+Emergency Controls
+Code Quality
+Proxy Patterns
+
+💻 Code Style
+
+Use consistent indentation (2 spaces)
+Follow JavaScript ES6+ standards
+Include comments for complex logic
+Use descriptive variable names
+Follow existing naming conventions
+
+JavaScript Style Guide
+javascript// Good
+function analyzeContract(contractCode) {
+  const vulnerabilities = [];
+  // Clear, descriptive logic
+  return vulnerabilities;
+}
+
+// Avoid
+function a(c) {
+  let v = [];
+  // Unclear, abbreviated names
+  return v;
+}
+CSS Conventions
+css/* Use BEM methodology */
+.vulnerability__title {
+  font-weight: 600;
+}
+
+.vulnerability--critical {
+  background: #fed7d7;
+}
+🧪 Testing
+Testing New Patterns
+
+Test against vulnerable contracts
+Test against secure contracts
+Verify no false positives on OpenZeppelin contracts
+Test edge cases and complex scenarios
+
+Sample Test Contract
+solidity// Test your pattern against this
+pragma solidity ^0.8.0;
+
+contract TestContract {
+    // Include various vulnerability scenarios
+    // Document expected detection results
+}
+Manual Testing Checklist
+
+ Pattern detects intended vulnerability
+ No false positives on secure code
+ Correct severity assignment
+ Proper solution provided
+ UI displays results correctly
+
+📚 Documentation
+
+Update README.md for new features
+Document API changes in docs/API.md
+Include inline code comments
+Update this contributing guide if needed
+Add examples for new features
+
+Documentation Standards
+
+Use clear, concise language
+Include code examples
+Provide both basic and advanced usage
+Keep examples up to date
+
+🔄 Pull Request Process
+
+Before submitting:
+
+Update documentation as needed
+Add test cases for new functionality
+Ensure all existing functionality works
+Update version numbers if applicable
+Run linting and formatting tools
+
+
+PR Description should include:
+
+Clear description of changes
+Motivation for the change
+Testing performed
+Screenshots for UI changes
+Breaking changes (if any)
+
+
+Review process:
+
+All PRs require review
+Address feedback promptly
+Keep commits clean and meaningful
+Squash commits if requested
+
+
+
+Commit Message Format
+type(scope): description
+
+Examples:
+feat(scanner): add flashloan vulnerability detection
+fix(ui): resolve mobile responsiveness issue
+docs(api): update function documentation
+test(patterns): add reentrancy test cases
+🏷️ Versioning
+We use Semantic Versioning:
+
+MAJOR: Breaking changes
+MINOR: New features (backward compatible)
+PATCH: Bug fixes (backward compatible)
+
+🤝 Community Guidelines
+
+Be respectful and inclusive
+Help others learn about smart contract security
+Share knowledge and best practices
+Provide constructive feedback
+Follow the Code of Conduct
+
+Communication Channels
+
+GitHub Issues: Bug reports and feature requests
+GitHub Discussions: General questions and ideas
+Pull Requests: Code contributions
+
+🔍 Security Vulnerability Reporting
+If you discover a security vulnerability in this tool:
+
+Do not create a public issue
+Email security@[domain].com
+Include detailed information
+Allow time for responsible disclosure
+
+🎯 Current Priorities
+Help wanted in these areas:
+
+ Additional vulnerability patterns
+ Performance optimizations
+ Mobile UI improvements
+ Integration with development tools
+ Automated testing framework
+ Documentation improvements
+
+🙋‍♀️ Questions?
+Feel free to:
+
+Open an issue for questions
+Start a discussion for ideas
+Reach out to maintainers directly
+
+Thank you for contributing to making smart contracts more secure! 🛡️

@@ -1,0 +1,177 @@
+Security Policy
+🛡️ Reporting Security Vulnerabilities
+If you discover a security vulnerability in this project, please report it responsibly:
+
+Do not create a public GitHub issue
+Email security concerns to: [your-email@domain.com]
+Include detailed information about the vulnerability
+Allow reasonable time for the issue to be addressed before public disclosure
+
+📋 Supported Versions
+VersionSupported1.0.x✅ Yes< 1.0❌ No
+🔒 Security Considerations
+This Tool
+
+This scanner runs entirely in the browser
+No contract code is transmitted to external servers
+All analysis is performed client-side
+No data is stored or logged remotely
+Uses standard web technologies (HTML, CSS, JavaScript)
+
+Contract Analysis
+
+This tool provides automated analysis only
+Results should not replace professional security audits
+False positives and negatives are possible
+Always verify findings manually
+Consider multiple analysis tools
+
+Privacy
+
+Your contract code never leaves your browser
+No analytics or tracking implemented
+No cookies or local storage of sensitive data
+Open source for transparency
+
+🛠️ Best Practices
+Using This Tool
+
+Keep the tool updated to latest version
+Use in conjunction with other security tools
+Perform comprehensive testing beyond automated scanning
+Get professional audits for production contracts
+Understand that automated tools have limitations
+
+Smart Contract Security
+
+Follow established security patterns (OpenZeppelin)
+Implement comprehensive test coverage
+Use static analysis tools in development
+Conduct regular security reviews
+Plan for emergency response procedures
+
+⚠️ Disclaimer
+This security scanner is provided "as is" without warranty of any kind. Users are responsible for:
+
+Verifying all security findings
+Conducting thorough testing
+Obtaining professional audits for production use
+Understanding that automated tools have limitations
+Making final security decisions based on comprehensive analysis
+
+Limitations
+
+Pattern-based detection may miss novel vulnerabilities
+False positives possible with complex contract logic
+Cannot analyze external dependencies or oracle behavior
+Limited to static analysis of provided code
+Does not test actual contract execution
+
+🎯 Scope
+This security policy covers:
+
+The scanner web application
+Vulnerability detection patterns
+User interface and experience
+Documentation and examples
+
+This policy does not cover:
+
+Third-party dependencies or libraries
+User's smart contracts being analyzed
+External tools or services referenced
+Browser security or environment
+
+📞 Contact Information
+For security concerns:
+
+Email: [your-email@domain.com]
+Response time: Within 48 hours
+Resolution time: Varies by severity
+
+For general issues:
+
+GitHub Issues: Bug reports and feature requests
+GitHub Discussions: Questions and community support
+
+🔄 Security Update Process
+
+Vulnerability Assessment
+
+Severity classification
+Impact analysis
+Exploitability evaluation
+
+
+Response Timeline
+
+Critical: 24-48 hours
+High: 1 week
+Medium: 2-4 weeks
+Low: Next release cycle
+
+
+Disclosure Process
+
+Private notification to reporter
+Development of fix
+Testing and validation
+Public disclosure with fix
+Security advisory publication
+
+
+
+📚 Security Resources
+Smart Contract Security
+
+OpenZeppelin Security Guidelines
+ConsenSys Smart Contract Best Practices
+Ethereum Security Documentation
+OWASP Smart Contract Security
+
+General Web Security
+
+OWASP Top 10
+MDN Web Security
+Content Security Policy
+
+Audit Firms
+
+Trail of Bits
+ConsenSys Diligence
+OpenZeppelin
+Quantstamp
+CertiK
+
+🏆 Recognition
+We appreciate responsible disclosure of security vulnerabilities. Contributors who report valid security issues will be:
+
+Credited in security advisories (with permission)
+Listed in project acknowledgments
+Invited to test fixes before public release
+
+📜 Legal
+
+Good faith security research is encouraged
+We will not pursue legal action against researchers who follow responsible disclosure
+Please respect user privacy and data protection laws
+Do not access data that doesn't belong to you
+
+🔐 Cryptographic Considerations
+This tool does not implement custom cryptography but relies on:
+
+Browser-standard crypto APIs
+No key generation or management
+No encryption of user data
+Standard HTTPS for any external resources
+
+🎓 Security Education
+We believe in security education and encourage:
+
+Learning about smart contract vulnerabilities
+Understanding common attack vectors
+Practicing secure development habits
+Sharing knowledge with the community
+
+
+Remember: Automated tools are helpful but not sufficient. Always combine multiple analysis methods and get professional audits for production smart contracts.

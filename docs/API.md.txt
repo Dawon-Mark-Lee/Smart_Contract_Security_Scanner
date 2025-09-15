@@ -1,0 +1,134 @@
+API Documentation
+Overview
+The Smart Contract Security Scanner provides a JavaScript API for programmatic vulnerability detection.
+Core Functions
+analyzeContract(contractCode)
+Analyzes a Solidity contract for security vulnerabilities.
+Parameters:
+
+contractCode (string): The Solidity source code to analyze
+
+Returns:
+
+Array of vulnerability objects
+
+Example:
+javascriptconst vulnerabilities = analyzeContract(contractCode);
+console.log(`Found ${vulnerabilities.length} vulnerabilities`);
+displayResults(vulnerabilities)
+Renders vulnerability results in the UI.
+Parameters:
+
+vulnerabilities (array): Array of vulnerability objects
+
+exportReport()
+Generates and downloads a comprehensive security report.
+Vulnerability Object Structure
+javascript{
+  name: "Vulnerability Name",
+  pattern: /regex-pattern/g,
+  severity: "critical|high|medium|low",
+  description: "Description of the vulnerability",
+  solution: "Recommended fix",
+  gasImpact: "High|Medium|Low|None",
+  category: "Security Category",
+  line: 42,
+  code: "Code snippet"
+}
+Extending the Scanner
+Adding New Vulnerability Patterns
+
+Add pattern to vulnerabilityPatterns array in src/vulnerabilities.js
+Include regex pattern, severity, description, and solution
+Test with sample contracts
+
+Custom Categories
+Vulnerabilities are categorized by:
+
+Access Control
+MEV Protection
+Oracle Manipulation
+Cryptography
+Gas Optimization
+Error Handling
+Input Validation
+Randomness
+Transparency
+Decentralization
+Emergency Controls
+Code Quality
+Proxy Patterns
+
+Pattern Matching
+The scanner uses regular expressions to detect vulnerability patterns in Solidity code:
+javascript{
+  name: "Reentrancy Attack",
+  pattern: /\.call\{value:.*?\}\(\s*""\s*\);.*?balances\[.*?\]\s*[-]=|balances\[.*?\]\s*[-]=.*?\.call\{value:/s,
+  severity: "critical",
+  description: "External call before state update enables reentrancy attacks.",
+  solution: "Update state before external calls or use ReentrancyGuard modifier.",
+  gasImpact: "High",
+  category: "Access Control"
+}
+Integration Examples
+Basic Usage
+javascript// Initialize scanner
+const scanner = new SecurityScanner();
+
+// Analyze contract
+const code = `
+pragma solidity ^0.8.0;
+contract MyContract {
+    // contract code
+}
+`;
+
+const results = scanner.analyze(code);
+console.log(results);
+With Custom Patterns
+javascript// Add custom vulnerability pattern
+scanner.addPattern({
+  name: "Custom Vulnerability",
+  pattern: /your-custom-regex/g,
+  severity: "medium",
+  description: "Custom vulnerability description",
+  solution: "How to fix it"
+});
+Export Functionality
+javascript// Generate report
+const report = scanner.generateReport(vulnerabilities);
+
+// Download as file
+scanner.downloadReport(report, 'security-analysis.md');
+Error Handling
+The scanner includes comprehensive error handling:
+javascripttry {
+  const results = analyzeContract(contractCode);
+  displayResults(results);
+} catch (error) {
+  console.error('Analysis failed:', error.message);
+  // Handle error appropriately
+}
+Performance Considerations
+
+Analysis is performed client-side for privacy
+Large contracts may take longer to analyze
+Results are cached for repeated scans
+Pattern matching is optimized for common vulnerabilities
+
+Browser Compatibility
+Supported browsers:
+
+Chrome 80+
+Firefox 75+
+Safari 13+
+Edge 80+
+
+Future Enhancements
+Planned API improvements:
+
+WebAssembly integration for faster analysis
+Support for multiple Solidity versions
+Integration with popular IDEs
+Real-time analysis as you type
+Custom rule configuration

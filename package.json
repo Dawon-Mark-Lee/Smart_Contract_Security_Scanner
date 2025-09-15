@@ -1,0 +1,42 @@
+{
+  "name": "smart-contract-security-scanner",
+  "version": "1.0.0",
+  "description": "A comprehensive web-based security analysis tool for Solidity smart contracts",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8000",
+    "dev": "http-server -p 8000 -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/",
+    "format": "prettier --write src/"
+  },
+  "keywords": [
+    "blockchain",
+    "smart-contracts",
+    "security",
+    "vulnerability",
+    "solidity",
+    "defi",
+    "ethereum",
+    "audit",
+    "scanner"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/smart-contract-security-scanner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/smart-contract-security-scanner/issues"
+  },
+  "homepage": "https://github.com/yourusername/smart-contract-security-scanner#readme",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.8.0",
+    "http-server": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
